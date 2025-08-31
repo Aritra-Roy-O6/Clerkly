@@ -1,0 +1,155 @@
+/* ... keep all your existing css above this line ... */
+
+/* Dashboard Layout Styles */
+.sidebar {
+  width: 280px;
+  background-color: #f8f9fa; /* Light grey tone */
+  height: 100vh;
+  color: #212529; /* Black text */
+  transition: width 0.3s ease;
+}
+
+.sidebar .nav-link {
+  color: #212529;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar .nav-link.active {
+  background-color: var(--clerkly-primary) !important;
+  color: rgb(0, 0, 0) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+.main-content {
+  overflow-y: auto;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* User Info & Logout Button in Sidebar */
+.user-info {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.btn-logout {
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+/* Custom React Calendar Styles */
+.react-calendar {
+  border: none !important;
+  font-family: 'Inter', sans-serif;
+  border-radius: 0.5rem;
+}
+
+.react-calendar__tile {
+  border-radius: 50%;
+}
+
+.react-calendar__tile--now {
+  background: #e6f7ff !important;
+  color: #0c63e4;
+}
+
+.react-calendar__tile--active {
+  background: var(--clerkly-primary) !important;
+  color: white !important;
+}
+
+.react-calendar__tile--active:hover {
+    background: var(--clerkly-primary-dark) !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #dc3545;
+}
+
+.event-marker {
+    height: 8px;
+    width: 8px;
+    background-color: var(--clerkly-primary);
+    border-radius: 50%;
+    margin: 0 auto;
+    line-height: 0;
+    position: relative;
+    top: -5px;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+.modal.show {
+    display: block;
+}
+
+/* Archives AI Chat Styles */
+.chat-container {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat-message {
+  display: flex;
+  max-width: 80%;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+}
+
+.chat-message.ai {
+  align-self: flex-start;
+}
+
+.message-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.chat-message.user .message-bubble {
+  background-color: var(--clerkly-primary);
+  color: rgb(0, 0, 0);
+  border-top-right-radius: 0.25rem;
+}
+
+.chat-message.ai .message-bubble {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  color: var(--clerkly-dark);
+  border-top-left-radius: 0.25rem;
+}
+
+.chat-input-area .form-control {
+    height: 70px;
+    padding: 0.75rem 1rem;
+}
+
+.chat-input-area .btn {
+    height: 50px;
+    width: 100px;
+}
